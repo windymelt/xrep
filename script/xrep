@@ -1,0 +1,15 @@
+#!/usr/bin/env perl
+use pQuery;
+
+my $query_str = $ARGV[0];
+
+my $xml_lines;
+while(my $line = <STDIN>) {
+    $xml_lines = $xml_lines . $line . "\n";
+}
+
+pQuery($xml_lines)
+    ->find($query_str)
+    ->each(sub {
+               print pQuery($_)->toHtml() . "\n";
+           });
