@@ -1,14 +1,19 @@
 # NAME
 
-Xrep - It's new $module
+Xrep - grep of XML
 
 # SYNOPSIS
 
-    use Xrep;
+    xrep <jQuery selector>
 
 # DESCRIPTION
 
-Xrep is ...
+Xrep is xml extraction tool.
+
+You can specify elements using jQuery selector string;
+xrep outputs extracted xml elements to stdout.
+stdin is used for XML input.
+One line corresponds one element.
 
 # LICENSE
 
